@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>溫馨小店 — 店家介紹頁</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- 方便社群分享與搜尋（簡單示例） -->
+  <meta name="description" content="溫馨小店：手作點心與輕食，歡迎預約與到訪。" />
+</head>
+
+<body>
+  <!-- 本頁面為店家介紹頁，包含導覽、首頁、關於、菜單、相簿與聯絡 -->
+  <!-- 導覽列（語意化 nav） -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">溫馨小店</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽">
+        ☰
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主導覽">
+        <ul>
+          <li><a href="#home">首頁</a></li>
+          <li><a href="#about">關於</a></li>
+          <li><a href="#menu">菜單</a></li>
+          <li><a href="#gallery">相簿</a></li>
+          <li><a href="#contact">聯絡</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero 區 -->
+    <section id="home" class="hero" role="region" aria-label="首頁橫幅">
+      <div class="container hero-inner">
+        <h1>溫馨小店<br><span class="highlight">手作點心與輕食</span></h1>
+        <p class="lead">嚴選當季食材，每日限量手作。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#menu">立即查看菜單</a>
+          <a class="btn outline" href="#contact">預約／聯絡</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About 區 -->
+    <section id="about" class="about container" role="region" aria-label="關於我們">
+      <h2>關於我們</h2>
+      <p>我們是一間小型家庭式甜點店，重視原料與手工，每日限量供應。歡迎來店品嘗或提前預訂。</p>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+          alt="店內溫馨座位與甜點" />
+        <figcaption>店內一角與當日甜點示意圖</figcaption>
+      </figure>
+    </section>
+
+    <!-- Menu / 內容卡片（至少 3 張卡） -->
+    <section id="menu" class="menu container" role="region" aria-label="菜單">
+      <h2>主打菜單</h2>
+      <p class="muted">以下為部分招牌，實際品項請以到店或電話詢問為準。</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop"
+            alt="經典檸檬塔" />
+          <h3>經典檸檬塔</h3>
+          <p class="card-desc">酸甜平衡，塔皮酥脆，每日手作。</p>
+          <p class="price">NT$120</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop"
+            alt="手沖單品咖啡" />
+          <h3>手沖單品咖啡</h3>
+          <p class="card-desc">精選豆款，每杯現煮，建議搭配檸檬塔。</p>
+          <p class="price">NT$100</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop"
+            alt="當季水果派" />
+          <h3>當季水果派</h3>
+          <p class="card-desc">嚴選當季水果，甜度自然，口感清爽。</p>
+          <p class="price">NT$150</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery / 相簿 -->
+    <section id="gallery" class="gallery container" role="region" aria-label="相簿">
+      <h2>相簿</h2>
+      <div class="grid">
+        <!-- 小型圖片集，示範響應式圖片排列 -->
+        <figure><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop"
+            alt="精緻甜點近照" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?q=80&w=800&auto=format&fit=crop"
+            alt="手作甜點桌" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop"
+            alt="店面外觀傍晚" /></figure>
+      </div>
+    </section>
+
+    <!-- Contact / 聯絡表單與位置 -->
+    <section id="contact" class="contact container" role="region" aria-label="聯絡與位置">
+      <h2>聯絡我們</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <address>
+            <strong>溫馨小店</strong><br />
+            台北市中山區示範路100號<br />
+            營業時間：週二–週日 10:00–18:00（週一公休）<br />
+            電話：02-1234-5678
+          </address>
+          <!-- 可替換為真實的 Google Maps iframe -->
+          <div class="map">
+            <iframe title="店家位置地圖"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.123456789012!2d121.531!3d25.047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5YyX5biC!5e0!3m2!1szh-TW!2stw!4v0000000000000"
+              aria-hidden="false" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <!-- 使用語意化 label 與 required 屬性，方便初學者理解 -->
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required placeholder="您的姓名" />
+
+          <label for="email">電子郵件</label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com" />
+
+          <label for="message">訊息 / 預約資訊</label>
+          <textarea id="message" name="message" rows="5" required minlength="10"
+            placeholder="請輸入內容（至少 10 個字）"></textarea>
+
+          <button type="submit" class="btn">送出</button>
+          <p id="form-msg" class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- 聯絡資訊區 -->
+        <div class="footer-section">
+          <h3>聯絡資訊</h3>
+          <address>
+            <p><strong>溫馨小店</strong></p>
+            <p>台北市中山區示範路100號</p>
+            <p>電話：<a href="tel:0212345678">02-1234-5678</a></p>
+            <p>信箱：<a href="mailto:hello@warmshop.com">hello@warmshop.com</a></p>
+            <p>營業時間：週二–週日 10:00–18:00<br />（週一公休）</p>
+          </address>
+        </div>
+
+        <!-- 快速連結區 -->
+        <div class="footer-section">
+          <h3>快速連結</h3>
+          <nav aria-label="頁尾導覽">
+            <ul>
+              <li><a href="#home">首頁</a></li>
+              <li><a href="#about">關於我們</a></li>
+              <li><a href="#menu">菜單</a></li>
+              <li><a href="#gallery">相簿</a></li>
+              <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- 社群連結區 -->
+        <div class="footer-section">
+          <h3>追蹤我們</h3>
+          <ul class="social-links">
+            <li><a href="https://facebook.com/warmshop" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook">Facebook</a></li>
+            <li><a href="https://instagram.com/warmshop" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">Instagram</a></li>
+            <li><a href="https://line.me/R/ti/p/@warmshop" target="_blank" rel="noopener noreferrer"
+                aria-label="LINE">LINE</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 版權與法律連結 -->
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> 溫馨小店 · 版權所有</p>
+        <ul class="legal-links">
+          <li><a href="#privacy">隱私權政策</a></li>
+          <li><a href="#terms">使用條款</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
